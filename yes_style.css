@@ -1,0 +1,82 @@
+/* General Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9e3e3;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    text-align: center;
+}
+
+/* Header */
+.header_text {
+    font-size: 3em;
+    color: #d32f2f;
+    margin-top: 50px;
+}
+
+/* GIF Styling */
+.gif_container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Top Right Button */
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4d;
+    padding: 15px 25px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.5);
+    transition: all 0.3s ease;
+}
+
+.top-right:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
+
+.top-right a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Floating Hearts Animation */
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { transform: translateY(-100px); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    font-size: 2em;
+    color: #ff4d4d;
+    animation: float 3s infinite;
+}
+
+/* Different Animation Delays for Hearts */
+.heart:nth-child(1) { animation-duration: 4s; left: 10%; }
+.heart:nth-child(2) { animation-duration: 6s; left: 80%; }
+.heart:nth-child(3) { animation-duration: 5s; left: 50%; }
+.heart:nth-child(4) { animation-duration: 7s; left: 30%; }
